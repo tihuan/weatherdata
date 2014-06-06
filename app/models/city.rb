@@ -3,5 +3,5 @@ class City < ActiveRecord::Base
   validates :name, presence: true
   validates :country, presence: true
 
-  has_one :weather
+  has_many :weathers
 end
