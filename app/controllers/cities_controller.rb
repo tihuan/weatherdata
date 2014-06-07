@@ -1,7 +1,8 @@
 class CitiesController < ApplicationController
   def index
     @cities = City.all
-    @weathers = City.first.weathers
+    @weathers_first12 = City.first.weathers.last(24)[0..10]
+    @weathers_last12 = City.first.weathers.last(24)[11..23]
     @city_temps = city_temps
   end
 

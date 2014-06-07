@@ -6,20 +6,37 @@
 
   <%= line_chart(@city_temps) %>
 
-  <table id="temp_table">
-  <thread>
-    <tr>
-      <% @weathers.map do |weather| %>
-        <th><%= weather.created_at.in_time_zone("CET").strftime("%I:%M%p %a") %></th>
+  <table class="temp_table" id="first12">
+    <thread>
+      <tr>
+        <% @weathers_first12.map do |weather| %>
+          <th><%= weather.created_at.in_time_zone("CET").strftime("%I:%M%p %a") %></th>
+        <% end %>
+      </tr>
+    </thread>
+    <tbody>
+      <% @weathers_first12.each do |weather| %>
+        <td><%= weather.temp %>F</td>
       <% end %>
-    </tr>
-  </thread>
-  <tbody>
-    <% @weathers.each do |weather| %>
-      <td><%= weather.temp %>F</td>
-    <% end %>
-  </tbody>
+    </tbody>
 </table>
+
+<% if @weathers_last12 %>
+    <table class="temp_table" id="last12">
+      <thread>
+        <tr>
+          <% @weathers_last12.map do |weather| %>
+            <th><%= weather.created_at.in_time_zone("CET").strftime("%I:%M%p %a") %></th>
+          <% end %>
+        </tr>
+      </thread>
+      <tbody>
+        <% @weathers_last12.each do |weather| %>
+          <td><%= weather.temp %>F</td>
+        <% end %>
+      </tbody>
+  </table>
+<% end %>
 
 </div>
 
