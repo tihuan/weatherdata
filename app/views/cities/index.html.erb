@@ -1,7 +1,27 @@
-<% @cities.each do |city| %>
-  <p>City ID: <%= city.city_id %></p>
-  <p>Country: <%= city.country %></p>
-  <p>City Name: <%= city.name %></p>
-<% end %>
+<div>
+  <% @cities.each do |city| %>
+    <p>Country: <%= city.country %></p>
+    <p>City Name: <%= city.name %></p>
+  <% end %>
 
-<%= line_chart(@city_temps) %>
+  <%= line_chart(@city_temps) %>
+
+  <table id="temp_table">
+  <thread>
+    <tr>
+      <% @weathers.map do |weather| %>
+        <th><%= weather.created_at.in_time_zone("CET").strftime("%I:%M%p %a") %></th>
+      <% end %>
+    </tr>
+  </thread>
+  <tbody>
+    <% @weathers.each do |weather| %>
+      <td><%= weather.temp %>F</td>
+    <% end %>
+  </tbody>
+</table>
+
+</div>
+
+
+
