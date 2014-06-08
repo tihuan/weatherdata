@@ -4,6 +4,7 @@ class Weather < ActiveRecord::Base
   validates :pressure, presence: true
   validates :temp_min, presence: true
   validates :temp_max, presence: true
+  validates :localtime, presence: true
 
   belongs_to :city
 end

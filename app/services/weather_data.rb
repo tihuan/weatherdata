@@ -15,7 +15,7 @@ class WeatherData
     def self.store_data(result)
       city = City.find_or_create_by(name: result["name"], country: result["sys"]["country"], city_id: result["id"] )
       temps = result["main"]
-      weather_data = temps.merge({ city_id: city.id })
+      weather_data = temps.merge({ city_id: city.id, localtime: Time.now.in_time_zone("CET") })
       Weather.create(weather_data)
     end
 end

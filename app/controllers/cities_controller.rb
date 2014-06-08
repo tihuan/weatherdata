@@ -8,7 +8,7 @@ class CitiesController < ApplicationController
 
   def city_temps
     weathers = City.first.weathers.last(24)
-    weather_temp_pairs = weathers.map { |weather| [weather.created_at.to_s, weather.temp] }
+    weather_temp_pairs = weathers.map { |weather| [weather.localtime.to_s, weather.temp] }
     p hourly_temps = Hash[weather_temp_pairs]
   end
 end

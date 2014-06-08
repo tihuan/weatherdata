@@ -10,7 +10,7 @@
     <thread>
       <tr>
         <% @weathers_first12.map do |weather| %>
-          <th><%= weather.created_at.in_time_zone("CET").strftime("%I:%M%p %a") %></th>
+          <th><%= weather.localtime.strftime("%I:%M%p %a") %></th>
         <% end %>
       </tr>
     </thread>
@@ -26,7 +26,7 @@
       <thread>
         <tr>
           <% @weathers_last12.map do |weather| %>
-            <th><%= weather.created_at.in_time_zone("CET").strftime("%I:%M%p %a") %></th>
+            <th><%= weather.localtime.strftime("%I:%M%p %a") %></th>
           <% end %>
         </tr>
       </thread>
