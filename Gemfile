@@ -1,5 +1,11 @@
 source 'https://rubygems.org'
 
+# Embed the V8 Javascript Interpreter into Ruby for LESS/Bootstrap
+gem "therubyracer"
+gem 'libv8'
+gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+gem 'twitter-bootstrap-rails'
+
 gem 'chartkick'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
