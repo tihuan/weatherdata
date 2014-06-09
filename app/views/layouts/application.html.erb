@@ -9,7 +9,7 @@
   <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
 </head>
-<body>
+<body class="<%= @city.name.downcase.tr_s(' ', '-') if @city %>">
   <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
       <div class="container">
