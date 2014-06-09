@@ -1,10 +1,10 @@
 <div>
 
-<h1><%= @city.name %> Weather in Last 24 Hours</h1>
-
-    <p>Country: <%= @city.country %></p>
-    <p>City Name: <%= @city.name %></p>
-
+  <div id='city-head'>
+    <h1><%= @city.name %> Weather in Last 24 Hours</h1>
+    <h3><%= @city.name %></h3>
+    <h4><%= @city.country %></h3>
+  </div>
   <%= line_chart(@city_temps) %>
 
   <table class="temp_table" id="first12">
@@ -38,7 +38,6 @@
       </tbody>
   </table>
 <% end %>
-
 </div>
 
 
