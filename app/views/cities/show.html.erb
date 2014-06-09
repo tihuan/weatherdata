@@ -6,9 +6,9 @@
 
   <%= line_chart(@city_temps) %>
 
-  <%=  render partial: "table", locals:{ weathers: @weathers_first12 } %>
+  <%=  render partial: "table", locals: { weathers: @weathers_first12 } %>
 
 <% if @weathers_last12 %>
-    <%=  render partial: "table", locals:{ weathers: @weathers_last12 } %>
+    <%=  render partial: "table", locals: { weathers: @weathers_last12 } %>
 <% end %>
 </div>
