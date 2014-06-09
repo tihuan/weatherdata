@@ -1,14 +1,16 @@
-<div>
-  <div id='city-head'>
+<div id='show-page'>
+  <div id='city-head')>
     <h1><%= @city.name %> Weather in Last 24 Hours</h1>
     <h3><%= @city.name %>, <%= @city.country %></h3>
   </div>
 
-  <%= line_chart(@city_temps) %>
+  <div id='weather-info'>
+    <%= line_chart(@city_temps) %>
 
-  <%=  render partial: "table", locals: { weathers: @weathers_first12 } %>
+    <%=  render partial: "table", locals: { weathers: @weathers_first12 } %>
 
-<% if @weathers_last12 %>
-    <%=  render partial: "table", locals: { weathers: @weathers_last12 } %>
-<% end %>
+    <% if @weathers_last12 %>
+        <%=  render partial: "table", locals: { weathers: @weathers_last12 } %>
+    <% end %>
+  </div>
 </div>
