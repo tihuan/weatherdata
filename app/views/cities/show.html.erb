@@ -1,44 +1,14 @@
 <div>
-
   <div id='city-head'>
     <h1><%= @city.name %> Weather in Last 24 Hours</h1>
-    <h3><%= @city.name %></h3>
-    <h4><%= @city.country %></h3>
+    <h3><%= @city.name %>, <%= @city.country %></h3>
   </div>
+
   <%= line_chart(@city_temps) %>
 
-  <table class="temp_table" id="first12">
-    <thread>
-      <tr>
-        <% @weathers_first12.map do |weather| %>
-          <th><%= weather.localtime.strftime("%I:%M%p %a") %></th>
-        <% end %>
-      </tr>
-    </thread>
-    <tbody>
-      <% @weathers_first12.each do |weather| %>
-        <td><%= weather.temp %>F</td>
-      <% end %>
-    </tbody>
-</table>
+  <%=  render partial: "table", locals:{ weathers: @weathers_first12 } %>
 
 <% if @weathers_last12 %>
-    <table class="temp_table" id="last12">
-      <thread>
-        <tr>
-          <% @weathers_last12.map do |weather| %>
-            <th><%= weather.localtime.strftime("%I:%M%p %a") %></th>
-          <% end %>
-        </tr>
-      </thread>
-      <tbody>
-        <% @weathers_last12.each do |weather| %>
-          <td><%= weather.temp %>F</td>
-        <% end %>
-      </tbody>
-  </table>
+    <%=  render partial: "table", locals:{ weathers: @weathers_last12 } %>
 <% end %>
 </div>
-
-
-

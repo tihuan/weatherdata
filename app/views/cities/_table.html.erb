@@ -1,0 +1,14 @@
+<table class="temp_table">
+    <thread>
+      <tr>
+        <% weathers.map do |weather| %>
+          <th><%= weather.localtime.strftime("%I:%M%p %a") %></th>
+        <% end %>
+      </tr>
+    </thread>
+    <tbody>
+      <% weathers.each do |weather| %>
+        <td><%= weather.temp %>F</td>
+      <% end %>
+    </tbody>
+</table>
