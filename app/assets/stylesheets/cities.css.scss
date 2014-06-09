@@ -2,6 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#city-list {
+  text-align: center;
+}
+
+#city-head {
+  text-align: center;
+}
+
 .temp_table {
   border: 0.2em solid;
   width: 77%;
@@ -11,3 +19,4 @@
 .temp_table td {
   text-align: center;
 }
+
