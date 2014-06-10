@@ -5,11 +5,11 @@
   </div>
 
   <% if City.exists?(@city.id - 1) %>
-    <%= link_to('', city_path(id: @city.id - 1), class: 'fa fa-chevron-left') %>
+    <%= link_to('', city_path(id: @city.id - 1), class: 'fa fa-chevron-left fa-4x arrow-left') %>
   <% end %>
 
   <% if City.exists?(@city.id + 1) %>
-    <%= link_to('', city_path(id: @city.id + 1), class: 'fa fa-chevron-right') %>
+    <%= link_to('', city_path(id: @city.id + 1), class: 'fa fa-chevron-right fa-4x arrow-right') %>
   <% end %>
 
   <div id='weather-info'>
