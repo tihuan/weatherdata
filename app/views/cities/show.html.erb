@@ -5,7 +5,7 @@
   </div>
 
   <% if City.exists?(@city.id - 1) %>
-    <%= link_to('', city_path(id: @city.id - 1), class: 'fa fa-chevron-left fa-4x arrow-left') %>
+    <%= link_to('', city_path(id: @city.id - 1), class: 'fa fa-chevron-left fa-4x arrow-left', remote: true) %>
   <% end %>
 
   <% if City.exists?(@city.id + 1) %>
