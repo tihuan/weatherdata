@@ -7,8 +7,7 @@ class CitiesController < ApplicationController
 
   def show
     @city = City.find(params[:id])
-    @weathers_first12 = @city.weathers.last(24)[0..11]
-    @weathers_last12 = @city.weathers.last(24)[12..23]
+    @weathers = @city.weathers.last(24)
     @city_temps = city_temps
   end
 
@@ -23,3 +22,5 @@ private
     hourly_temps = Hash[weather_temp_pairs]
   end
 end
+
+

@@ -1,8 +1,8 @@
-<table class="temp_table">
+<table class="temp-table">
     <thread>
       <tr>
         <% weathers.map do |weather| %>
-          <th><%= weather.localtime.strftime("%I:%M%p %a") %></th>
+          <th><%= weather.localtime.strftime("%a %I:%M%p") %></th>
         <% end %>
       </tr>
     </thread>

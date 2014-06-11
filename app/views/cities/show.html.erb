@@ -15,10 +15,14 @@
   <div id='weather-info'>
     <%= line_chart(@city_temps) %>
 
-    <%=  render partial: "table", locals: { weathers: @weathers_first12 } %>
-
-    <% if @weathers_last12 %>
-        <%=  render partial: "table", locals: { weathers: @weathers_last12 } %>
-    <% end %>
+    <table>
+      <% @weathers.each_slice(6) do |weather_row| %>
+        <tr>
+          <td>
+            <%=  render partial: "table", locals: { weathers: weather_row } %>
+          </td>
+        </tr>
+      <% end %>
+    </table>
   </div>
 </div>

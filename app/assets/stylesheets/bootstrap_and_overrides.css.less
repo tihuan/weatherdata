@@ -1,6 +1,9 @@
 @import "twitter/bootstrap/bootstrap";
 
-body { padding-top: 60px; }
+body {
+  padding-top: 60px;
+  background: url("bg.jpg") no-repeat center center fixed;
+}
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Lobster', cursive;
@@ -14,30 +17,27 @@ table tbody {
   font-weight: bold;
 }
 
-body {
-  background: url("bg.jpg") no-repeat center center fixed;
-}
-
 #weather-info {
   width: 100%;
   padding: 2em 0;
 }
 
-#city-list {
+#city-list, #city-head {
   text-align: center;
 }
 
-#city-head {
-  text-align: center;
+#weather-info table {
+  margin: 0 auto;
 }
 
-.temp_table {
+.temp-table {
   width: 77%;
   margin: 0 auto 0.1em auto;
 }
 
-.temp_table td {
+.temp-table td {
   text-align: center;
+  border-bottom: 0.1em solid;
 }
 
 .arrow-right, .arrow-left {
@@ -100,6 +100,14 @@ body, .paris, .los-angeles,
 }
 
 @import "twitter/bootstrap/responsive";
+
+@media only screen and (max-width : 979px) {
+
+  td {
+
+  }
+
+}
 
 // Set the correct sprite paths
 @iconSpritePath: image-url("twitter/bootstrap/glyphicons-halflings.png");
