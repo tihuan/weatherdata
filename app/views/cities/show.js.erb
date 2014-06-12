@@ -1,3 +1,10 @@
-$("body").removeClass();
-$("body").addClass("<%= @city.name.downcase.tr_s(' ', '-') if @city %>");
-$("#show-page").html("<%= escape_javascript(render partial: 'show', locals: { cities: @cities, city: @city } ) %>");
+var image = $("body");
+    image.fadeOut(300, function () {
+        image.removeClass().addClass("<%= @city.name.downcase.tr_s(' ', '-') if @city %>");
+        image.fadeIn();
+    });
+$("#show-page").fadeOut(300).fadeIn(0, function() {
+  $("#show-page").html("<%= escape_javascript(render partial: 'show', locals: { cities: @cities, city: @city } ) %>");
+});
+
+
