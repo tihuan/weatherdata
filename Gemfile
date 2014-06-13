@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'unicorn'
+gem 'yui-compressor'
 
 # Embed the V8 Javascript Interpreter into Ruby for LESS/Bootstrap
 gem "therubyracer"
