@@ -27,15 +27,5 @@ describe CitiesController do
       get :show, id: city1.id
       assigns(:city).should eq(city1)
     end
-
-    it "assigns the first half of the last 24 hrs temps to @weathers_first12" do
-      get :show, id: city1.id
-      assigns(:weathers_first12).first.should eq(weather0)
-    end
-
-    it "assigns the second half of the last 24 hrs temps to @weathers_last12" do
-      get :show, id: city1.id
-      assigns(:weathers_last12).first.should eq(weather12)
-    end
   end
 end
