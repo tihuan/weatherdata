@@ -4,13 +4,8 @@
     <h3><%= @city.name %>, <%= @city.country %></h3>
   </div>
 
-  <% if City.exists?(@city.id - 1) %>
-    <%= link_to('', city_path(id: @city.id - 1), class: 'fa fa-chevron-left fa-4x arrow-left', remote: true) %>
-  <% end %>
-
-  <% if City.exists?(@city.id + 1) %>
-    <%= link_to('', city_path(id: @city.id + 1), class: 'fa fa-chevron-right fa-4x arrow-right', remote: true) %>
-  <% end %>
+  <%= arrow(@city.id - 1, "left") %>
+  <%= arrow(@city.id + 1, "right") %>
 
   <div id='weather-info'>
     <%= line_chart(@city_temps) %>

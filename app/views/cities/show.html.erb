@@ -4,7 +4,7 @@
     <h3><%= @city.name %>, <%= @city.country %></h3>
   </div>
 
-  <%= arrow(@city.id + 1, "left") %>
+  <%= arrow(@city.id - 1, "left") %>
   <%= arrow(@city.id + 1, "right") %>
 
   <div id='weather-info'>
