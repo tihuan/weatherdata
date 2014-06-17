@@ -9,7 +9,6 @@ feature "city weather data" do
     within("#city-list") do
       click_link("Paris")
     end
-    save_and_open_page
     expect(page).to have_css('#weather-info')
   end
 end
