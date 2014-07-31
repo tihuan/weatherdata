@@ -8,18 +8,12 @@ class CitiesController < ApplicationController
   def show
     @city = City.find(params[:id])
     @weathers = @city.weathers.recent(24)
-    @city_temps = city_temps
+    @city_temps = @city.temps(@weathers)
   end
 
 private
   def load_cities
     @cities = City.all
-  end
-
-  def city_temps
-    weathers = City.find(params[:id]).weathers.recent(24)
-    weather_temp_pairs = weathers.map { |weather| [weather.localtime.to_s, weather.temp] }
-    hourly_temps = Hash[weather_temp_pairs]
   end
 end
 
