@@ -8,5 +8,5 @@ class Weather < ActiveRecord::Base
 
   belongs_to :city
 
-  scope :recent, lambda { |num=nil| order('created_at desc').limit(num) }
+  scope :recent, lambda { |num = nil| order('created_at desc').limit(num) }
 end
