@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'virtus' # Use virtus for value objects and form objects
 gem 'unicorn'
 gem 'yui-compressor'
 
