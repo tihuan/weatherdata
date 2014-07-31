@@ -1,5 +1,5 @@
 class Cities::ShowPresenter
-  def initialize(city)
+  def initialize(city = nil)
     @city = city
   end
 
