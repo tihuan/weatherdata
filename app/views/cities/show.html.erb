@@ -1,7 +1,7 @@
 <div id='show-page'>
   <div id='city-head')>
     <h1><%= @city.name %> Weather in Last 24 Hours</h1>
-    <h3><%= @city.name %>, <%= @city.country %></h3>
+    <h3><%= @city.display_name %></h3>
   </div>
 
   <%= arrow(@city.id - 1, "left") %>
