@@ -7,4 +7,6 @@ class Weather < ActiveRecord::Base
   validates :localtime, presence: true
 
   belongs_to :city
+
+  scope :recent, lambda { |num=nil| order('created_at desc').limit(num) }
 end
