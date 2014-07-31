@@ -8,7 +8,7 @@
   <%= arrow(@city.id + 1, "right") %>
 
   <div id='weather-info'>
-    <%= line_chart(@city_hourly_temps) %>
-    <%= display_table(@weathers) %>
+    <%= line_chart(@presenter.city_hourly_temps) %>
+    <%= display_table(@presenter.weathers) %>
   </div>
 </div>

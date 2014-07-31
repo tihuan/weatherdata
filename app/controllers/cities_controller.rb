@@ -7,8 +7,7 @@ class CitiesController < ApplicationController
 
   def show
     @city = City.find(params[:id])
-    @weathers = @city.weathers.recent(24)
-    @city_hourly_temps = @city.hourly_temps(@weathers)
+    @presenter = Cities::ShowPresenter.new(@city)
   end
 
 private
