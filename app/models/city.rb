@@ -9,7 +9,7 @@ class City < ActiveRecord::Base
     "#{name}, #{country}"
   end
 
-  def temps(weathers)
+  def hourly_temps(weathers)
     weather_temp_pairs = weathers.map { |weather| [weather.localtime.to_s, weather.temp] }
     hourly_temps = Hash[weather_temp_pairs]
   end
