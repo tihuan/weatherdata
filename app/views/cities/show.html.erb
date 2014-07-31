@@ -11,7 +11,7 @@
     <%= line_chart(@city_temps) %>
 
     <% @weathers.each_slice(6) do |weather_row| %>
-          <%=  render partial: "table", locals: { weathers: weather_row } %>
+          <%=  render 'table', weathers: weather_row %>
     <% end %>
   </div>
 </div>
