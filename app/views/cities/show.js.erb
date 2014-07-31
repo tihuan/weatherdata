@@ -5,7 +5,7 @@ var page = $("body");
     });
 
 $("#show-page").fadeOut(300).fadeIn(0, function() {
-  $(this).html("<%= escape_javascript(render partial: 'show', locals: { cities: @cities, city: @city } ) %>");
+  $(this).html("<%= escape_javascript(render 'show', cities: @cities, city: @city ) %>");
 });
 
 

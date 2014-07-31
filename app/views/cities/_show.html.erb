@@ -9,9 +9,6 @@
 
   <div id='weather-info'>
     <%= line_chart(@city_temps) %>
-
-    <% @weathers.each_slice(6) do |weather_row| %>
-          <%=  render partial: "table", locals: { weathers: weather_row } %>
-    <% end %>
+    <%= display_table(@weathers) %>
   </div>
 </div>
