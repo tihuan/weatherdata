@@ -2,7 +2,7 @@
 
 ![image](http://i.imgur.com/SZ9NiAW.png)
 
-[Website](bit.ly/weatherdatago)
+[Website](http://bit.ly/weatherdatago)
 
 This web application automatically collects weather data hourly and displays it on their corresponding city page.
 
